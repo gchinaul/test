@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: will-playground-ingress
+  namespace: dev
+spec:
+  rules:
+  - host: wil-playground.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: wil-playground-service
+            port:
+              number: 8888
+
+# ajouter a /etc/hosts ca -> 127.0.0.1 wil-playground.local
