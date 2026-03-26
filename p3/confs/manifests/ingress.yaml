@@ -5,7 +5,7 @@ metadata:
   namespace: dev
 spec:
   rules:
-  - host: wil-playground.local
+  - host: wil42
     http:
       paths:
       - path: /
@@ -15,5 +15,3 @@ spec:
             name: wil-playground-service
             port:
               number: 8888
-
-# ajouter a /etc/hosts ca -> 127.0.0.1 wil-playground.local
